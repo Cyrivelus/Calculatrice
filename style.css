@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #3d3d3f 0%, #3f3e3f 100%);
+    font-family: 'Arial', sans-serif;
+}
+
+.calculatrice {
+    background: #2d2d2d;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    width: 320px;
+}
+
+#resultat {
+    width: 100%;
+    padding: 20px;
+    font-size: 28px;
+    text-align: right;
+    background: #1a1a1a;
+    border: 2px solid #667eea;
+    border-radius: 10px;
+    color: #00ff88;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.boutons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #404040;
+    color: #ffffff;
+}
+
+button:hover {
+    background: #555555;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#7, #8, #9, #4, #5, #6, #1, #2, #3, #0 {
+    background: #404040;
+    color: #00ff88;
+}
+
+#7:hover, #8:hover, #9:hover, #4:hover, #5:hover, #6:hover, #1:hover, #2:hover, #3:hover, #0:hover {
+    background: #555555;
+}
+
+#div, #mult, #soust, #add {
+    background: #667eea;
+    color: white;
+}
+
+#div:hover, #mult:hover, #soust:hover, #add:hover {
+    background: #7c8ff0;
+}
+
+#egal {
+    background: #00ff88;
+    color: #1a1a1a;
+    grid-column: span 2;
+}
+
+#egal:hover {
+    background: #33ff99;
+}
+
+#clear {
+    background: #ff6b6b;
+    color: white;
+    grid-column: span 2;
+}
+
+#clear:hover {
+    background: #ff7f7f;
+}
