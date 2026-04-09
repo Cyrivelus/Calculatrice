@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="calculatrice">
+    <div class="header">
+        <h1>Calculatrice</h1>
+        <div class="mode-buttons">
+            <button type="button" class="mode active" data-mode="standard">Standard</button>
+            <button type="button" class="mode" data-mode="imc">IMC</button>
+            <button type="button" class="mode" data-mode="pret">Prêt</button>
+        </div>
+    </div>
+
+    <input type="text" id="resultat" disabled placeholder="0">
+
+    <div class="standard active">
+        <div class="boutons">
+            <button id="clear">C</button>
+            <button id="del">DEL</button>
+            <button id="pourcent">%</button>
+            <button id="sqrt">√</button>
+            <button id="7">7</button>
+            <button id="8">8</button>
+            <button id="9">9</button>
+            <button id="div">/</button>
+            <button id="4">4</button>
+            <button id="5">5</button>
+            <button id="6">6</button>
+            <button id="mult">*</button>
+            <button id="1">1</button>
+            <button id="2">2</button>
+            <button id="3">3</button>
+            <button id="soust">-</button>
+            <button id="0">0</button>
+            <button id="point">.</button>
+            <button id="carre">x²</button>
+            <button id="add">+</button>
+            <button id="paren-open">(</button>
+            <button id="paren-close">)</button>
+            <button id="egal">=</button>
+        </div>
+    </div>
+
+    <div id="imc-panel" class="panel">
+        <div class="field">
+            <label for="imc-poids">Poids (kg)</label>
+            <input id="imc-poids" type="number" min="0" step="0.1" placeholder="ex. 70">
+        </div>
+        <div class="field">
+            <label for="imc-taille">Taille (m)</label>
+            <input id="imc-taille" type="number" min="0" step="0.01" placeholder="ex. 1.75">
+        </div>
+        <button id="imc-calc" class="action">Calculer IMC</button>
+        <div class="result-box" id="imc-result">Entrez vos données pour calculer l'IMC.</div>
+    </div>
+
+    <div id="pret-panel" class="panel">
+        <div class="field">
+            <label for="pret-montant">Montant</label>
+            <div class="field-inline">
+                <input id="pret-montant" type="number" min="0" step="0.01" placeholder="ex. 15000">
+                <select id="pret-monnaie">
+                    <option value="€">EUR</option>
+                    <option value="$">USD</option>
+                    <option value="FCFA">FCFA</option>
+                </select>
+            </div>
+        </div>
+        <div class="field">
+            <label for="pret-taux">Taux annuel (%)</label>
+            <input id="pret-taux" type="number" min="0" step="0.01" placeholder="ex. 3.5">
+        </div>
+        <div class="field">
+            <label for="pret-duree">Durée (années)</label>
+            <input id="pret-duree" type="number" min="0" step="1" placeholder="ex. 5">
+        </div>
+        <button id="pret-calc" class="action">Calculer prêt</button>
+        <div class="result-box" id="pret-result">Entrez les informations du prêt.</div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
